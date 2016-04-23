@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js canvas - geometry - birds</title>
+		<title>Colin Chen</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,600,700,800' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		
+		<link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+		<script src="js/lib/jquery.min.js"></script>
 		<!-- Css -->
 		<link rel="stylesheet" href="css/grid/normalize.css" />
 		<link rel="stylesheet" href="css/grid/skeleton.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel=icon href="img/favicon.png" sizes="16x16" type="image/png">
 	</head>
 	<body>
 		<div class="load-screen">
@@ -18,14 +21,16 @@
 		</div>
 		
 		<div id="container">
-			<nav id="animate">
+			
+			<nav>
 				<div class="divider">
 				</div>
 				<ul>
-					<li><a href="#home">Home</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#">Contact</a></li>
+					<a href="#home"><img id="logo_small" src="img/logo_small.png"/></a>
+					<li class="navItem"><a href="#home">Home</a></li>
+					<li class="navItem"><a href="#portfolio">Portfolio</a></li>
+					<li class="navItem"><a href="#about">About</a></li>
+					<li class="navItem"><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
 			
@@ -38,7 +43,7 @@
 			</div> -->
 			
 			<div class="section-container">
-				<div class="section section-one" id="home">
+				<div class="section" id="home">
 					<img class="hero-1" src="img/logo.png"/>
 				</div>
 				
@@ -46,8 +51,8 @@
 					<div id="wave">
 					</div>
 
-				<div id="portfolio" class="section section-three">
-					<div class="portfolio-container">
+				<div id="portfolio" class="section">
+					<div class="portfolio-container container">
 						<div class="row">
 							<div class="four columns ">
 								<img class="gallery" src="img/portfolio/creative.png"/>
@@ -83,17 +88,45 @@
 						</div>
 					</div>
 				</div>
-				
-				<div id="about" class="section section-three">
-					<div class="row">
+				<div id="floatContent">
+					
+				</div>
+				<div id="about">
+					<div class="about-container">
+						<div class="about-content container">
+							<div id="fadeBox">
+									<img id="portrait" src="img/portrait.png"/>
+									<p class="aboutText1">I try to be a "detective": discovering usability problems, knowing the tools you have and using the right one to solve the right problem. That's what I believe a UX designer should be. Designers are designers because we create and design solutions to problems, rather than opening a manual and repeat the exact same thing over and over again. <br><br>
+
+									I am a first-year Master's student at the University of Michigan, studying HCI and data science. I value simplicity, beauty and creativity in my work. Aside from being a UX designer, I am a classical musician. I play the piano and the violin.
+									<span><a href="Chen_Resume.pdf" target="_blank">View Résumé</a></span>
+									</p>
+									
+							</div>
+					
+						</div>
+						<div id="fadeTrigger">
+						</div>
+						<div id="contact">
+							<p class="contact-container"><img src="img/logo_gray.png"/><br>
+								cchent [at] umich.edu<br>
+								②06 · 307 · 1269<br><br>
+								<a href="http://www.dribbble.com/colinchen" target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+								<a href="https://www.linkedin.com/in/colintychen" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+								<a href="https://www.github.com/colczr" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+							</p>
 						
+						</div>
 					</div>
+					
 				</div>
 				
 				
+					
+					
+				</div>
 				
-				
-				
+					
 				
 
 			</div>
@@ -106,11 +139,13 @@
 		<script type="text/javascript" src="js/lib/modernizr.custom.min.js"></script>
 		<script type="text/javascript" src="js/lib/velocity.min.js"></script>
 		<script type="text/javascript" src="js/lib/greensock/TweenMax.min.js"></script>
+		
 		<script type="text/javascript" src="scrollmagic/uncompressed/ScrollMagic.js"></script>
 		<script type="text/javascript" src="scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
 		<script type="text/javascript" src="scrollmagic/uncompressed/plugins/animation.velocity.js"></script>
 		<script type="text/javascript" src="scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 		<script type="text/javascript" src="js/libs/jquery.smooth-scroll.js"></script>
+		
 		<script src="js/three.min.js"></script>
 		<script src="js/renderers/Projector.js"></script>
 		<script src="js/renderers/CanvasRenderer.js"></script>

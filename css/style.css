@@ -1,25 +1,31 @@
 
 body {
-  font-family: "Open Sans"; 
+  font-family: "Open Sans", "Sans Serif", "Arial"; 
   font-weight: 400;
   overflow-x: hidden;
 }
 
 .divider{
   position: absolute;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
   right: 8.5rem;
-  border-radius:1000px;
-  background-color: #F7A91A;
+  top: 0.7rem;
+  border-radius: 100px;
+  background-color: #C42128;
   z-index: 10000;
 
 }
 
-h2{
-  color:#F7A91A;
-  font-size: 2.5rem;
+#logo_small{
+  position: fixed;
+  right: 4.3rem;
+  height: 5rem;
+  top: 2rem;
+  z-index: 10000;
+  opacity: 0;
 }
+
 
 .navbg{
   position: fixed;
@@ -49,7 +55,7 @@ nav{
   height: 10rem;
   font-size: 1.3rem;
   text-align: left;
-  right: 0;
+  right: 1rem;
   margin: auto;
   top: 0;
   bottom: 0;
@@ -62,7 +68,7 @@ nav{
 nav > ul > li{
   list-style-type: none;
 
-  color: #F7A91A;
+  color: #666;
   padding-bottom: 1rem;
   padding-right: 2rem;
   margin: 0;
@@ -97,23 +103,24 @@ canvas{
   font-family: tsukushi;
   src: url(../fonts/Tsukushi.ttc); }
 
-.section-one{
-  width: 100vw;
+#home{
   height: 60vh;
 }
 
-.section-three{
+.section{
   width: 100vw;
-  height: 100vh;
+  height: auto;
 }
+
 
 #container{
   position: absolute;
   z-index: 2;
 }
 
+
 #wave{
-  background-image: url("../img/wave2.png");
+  background-image: url("../img/wave.png");
   background-size: cover;
   background-position:top;
   background-repeat: no-repeat;
@@ -129,16 +136,19 @@ canvas{
 }
 
 .gallery{
-  width: 80%;
+  width: 100%;
   display: block;
   margin:auto;
   margin-bottom: 5rem;
   
 }
 
-.portfolio-container{
+#about .gallery{
+  padding-top: 0.7rem;
+}
+
+.container{
   position: relative;
-  background-color: white;
   width: 80vw;
   margin: auto;
 }
@@ -186,8 +196,115 @@ a{
 .spinner:not(:required):before {
     content: '';
     border-radius: 50%;
-    border: 2px solid rgba(255, 200, 0, .6);
-    border-top-color: rgba(255, 200, 0, 1);
+    border: 2px solid rgba(196, 33, 40, 0.4);
+    border-top-color: rgba(196, 33, 40, 0.8);
     animation: spinner .6s linear infinite;
     -webkit-animation: spinner .6s linear infinite;
+}
+
+
+#contact{
+  height: 100vh;
+  background-color: #333;
+}
+
+.contact-container{
+  position: fixed;
+  height: 30rem;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  visibility: hidden;
+}
+
+.contact-container img{
+  height: 15rem;
+  padding-bottom: 1rem;
+}
+
+#contact > p i{
+  font-size: 2.5rem;
+  color: #c33;
+}
+
+.about-container{
+  background-image: url(../img/wave_long.png);
+  background-repeat: no-repeat;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100vw;
+}
+
+.about-container > .container{
+  padding-top: 20rem;
+  margin-bottom: 0;
+}
+
+#contact{
+  height: 80vh;
+  background-color: #333;
+
+  left: 0;
+  right: 0;
+}
+
+#about {
+  color: #fff;
+  font-weight: 300;
+}
+
+.about-container .container{
+  height: 100vh;
+}
+
+
+#portrait{
+  position: fixed;
+  left: 5vw;
+  bottom: 0;
+  height: 80vh;
+  z-index: 10000;
+}
+
+.aboutText1 {
+  vertical-align: middle;
+  position: fixed;
+  top: 0;
+  left: 42vw;
+  width: 40vw;
+  margin-bottom: 0;
+}
+
+#fadeTrigger{
+  height: 10vh;
+}
+
+#fadeBox{
+  visibility: hidden;
+}
+
+.aboutText1 > span{
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  
+}
+
+.aboutText1 > span > a{
+  padding: 1rem 2rem;
+  border: solid #c33 1px;
+  color: #c33;
+  font-weight: 400;
+  
+}
+
+.navItem{
+  font-weight: 400;
 }

@@ -393,9 +393,13 @@ function render() {
 //chagne bird color
 
     color = bird.material.color;
-    color.r = ( 1300 - bird.position.z ) / 1000;
-    color.g = ( 800 - bird.position.z ) / 1000;
-    color.b = ( 300 - bird.position.z ) / 1000;
+    color.r = ( 700 - bird.position.z ) / 1000;
+    color.g = ( 700 - bird.position.z ) / 1000;
+    color.b = ( 700 - bird.position.z ) / 1000;
+    
+    // color.r = ( 1300 - bird.position.z ) / 1000;
+    // color.g = ( 800 - bird.position.z ) / 1000;
+    // color.b = ( 300 - bird.position.z ) / 1000;
 
     bird.rotation.y = Math.atan2( - boid.velocity.z, boid.velocity.x );
     bird.rotation.z = Math.asin( boid.velocity.y / boid.velocity.length() );
@@ -418,6 +422,34 @@ function render() {
 // })
 
 
+  function resizePortrait(){
+    if (parseFloat($(window).height()) / $(window).width() < 0.75){
+      $('#portrait').css({'height':'80vh', 'width':'auto', 'left':'7vw'});
+      console.log("asdfsaffsa");
+    } else {
+      $('#portrait').css({'height':'auto', 'width':'40vw', 'left':'0'});
+      console.log("bbb");
+    }
+  };
+  
+  function verticalAlignText(element){
+    height = parseFloat($(window).height() - $(element).height())/2.0;
+    $(element).css('top', height);
+  }
+
+  $(window).ready(function(){
+    document.getElementsByTagName("CANVAS")[0].style.cssText="width: 99vw; height: 99vh;";
+    resizePortrait();
+    verticalAlignText('.aboutText1');
+  })
+  
+  $(window).on('resize', function(){
+    resizePortrait();
+    verticalAlignText('.aboutText1');
+    
+  });
+
+
   $( window ).on( 'load', function(){
       $( '.load-screen' ).fadeOut( 'slow', function(){
           $( this ).remove();
@@ -428,7 +460,7 @@ function render() {
 //ScrollMagic
 var controller = new ScrollMagic.Controller();
 
-var smscene1 = new ScrollMagic.Scene({duration: 800})
+var smscene1 = new ScrollMagic.Scene({duration: 1500})
   .setTween("#wave", {y:800})
 	.addTo(controller);
   
@@ -440,7 +472,17 @@ var tweenHeroFade = new TimelineMax ()
 	]);
 
 // build scene
-var smscene3 = new ScrollMagic.Scene({duration: 200})
+var smscene3 = new ScrollMagic.Scene({duration: 400})
+				.setTween(tweenHeroFade)
+				.addTo(controller);
+
+var tweenHeroFade = new TimelineMax ()
+	.add([
+		TweenMax.fromTo(".hero-1", 1, {autoAlpha: 1}, {autoAlpha: 0, ease: Linear.easeNone})
+	]);
+
+// build scene
+var smscene3 = new ScrollMagic.Scene({triggerElement: '#fadeTrigger', duration: 400})
 				.setTween(tweenHeroFade)
 				.addTo(controller);
 
@@ -451,10 +493,86 @@ var tweenPort = new TimelineMax ()
 	]);
 
 // build scene
-var smscene3 = new ScrollMagic.Scene({duration: 300})
+var smscene3 = new ScrollMagic.Scene({duration: 600})
 				.setTween(tweenPort)
 				.addTo(controller);
 
+
+
+var portHeight = $(".portfolio-container").height();
+var aboutHeight = $(".about-container").height();
+
+$("#contact").css('top', portHeight + aboutHeight + $("#home").height() + 25);
+
+//so that the section never overlapses with port section
+$(window).on('resize', function(portHeight, aboutHeight, controller){
+  portHeight = getPortHeight();
+  aboutHeight = getAboutHeight();
+  home = $('#home').height();
+  abc = portHeight + aboutHeight + home;
+  $("#contact").css('top', abc + 25);
+  
+
+});
+
+function getPortHeight(){
+  portH = $(".portfolio-container").height();
+  return portH;
+}
+
+function getAboutHeight(){
+  aboutH = $(".about-container").height();
+  return aboutH;
+}
+
+
+
+
+  var waveUp = new TimelineMax ()
+  	.add([
+  		TweenMax.fromTo(".about-container", 1, {top:portHeight + 850}, {top:portHeight + 300, ease: Linear.easeNone})
+  	]);
+
+  // build scene
+  var smsceneWaveUp = new ScrollMagic.Scene({triggerElement: "#about", duration: 500})
+  				.setTween(waveUp)
+  				.addTo(controller);
+
+  var waveUp = new TimelineMax ()
+  	.add([
+  		TweenMax.fromTo(".portfolio-container", 1, {autoAlpha: 1}, {autoAlpha: 0, ease: Linear.easeNone}),
+      TweenMax.to('.navItem', 1.5, {color: '#aaa'})
+  	]);
+
+  var smscene1 = new ScrollMagic.Scene({triggerElement: "#about", duration: 200})
+    .setTween(waveUp)
+  	.addTo(controller);
+    
+  var portraitFade = new TimelineMax ()
+  	.add([
+  		TweenMax.to("#fadeBox", 1, {autoAlpha: 1, ease: Linear.easeNone}),
+  	]);
+    
+  var smscenePortraitFade = new ScrollMagic.Scene({triggerElement: "#about", offset: "150vh", duration: 200})
+    .setTween(portraitFade)
+    .addTo(controller);
+    
+  var portraitFadeOut = new TweenMax.to("#fadeBox", 1, {autoAlpha: 0});
+    
+  var smsenePortraitFadeOut = new ScrollMagic.Scene({triggerElement: "#fadeTrigger", duration: 200})
+    .setTween(portraitFadeOut)
+    .addTo(controller);
+  
+  var contactIn = new TimelineMax ()
+  	.add([
+      TweenMax.fromTo(".contact-container", 1, {autoAlpha: 0}, {autoAlpha: 1}),
+      TweenMax.fromTo("#logo_small", 1, {autoAlpha: 1}, {autoAlpha: 0})
+      
+  	]);
+
+  var smseneContactIn = new ScrollMagic.Scene({triggerElement: "#contact", duration: 200})
+    .setTween(contactIn)
+    .addTo(controller);
 
 
   $(window).scroll(function(){
@@ -463,46 +581,30 @@ var smscene3 = new ScrollMagic.Scene({duration: 300})
     } else {
       $('canvas').fadeIn("slow");
     }
+    
   });
   
-  // $(window).scroll(function(){
-  //   if($(document).scrollTop() > 100){
-  //     $('.divider').fadeIn(300);
-  //   } else {
-  //     $('.divider').fadeOut(300);
-  //   }
-  // });
+  var smsceneDivider = new ScrollMagic.Scene({triggerElement: "#portfolio", duration:50})
+  					// trigger a velocity opaticy animation
+  					.setTween(".divider", {y: "31rem"})
+  					.addTo(controller);
+            
+  var smsceneDivider2 = new ScrollMagic.Scene({triggerElement: "#about", duration: 50})
+  					// trigger a velocity opaticy animation
+  					.setTween(".divider", {y: "61rem"})
+            .addTo(controller);
   
-
+  var smsceneDivider2 = new ScrollMagic.Scene({triggerElement: "#contact", duration: 50})
+  					// trigger a velocity opaticy animation
+  					.setTween(".divider", {y: "91rem"})
+            .addTo(controller);
   
-  var tweenDiv = new TimelineMax ()
-  	.add([
-  		TweenMax.fromTo(".divider", 1, {top:7}, {top:37, ease: Elastic}),
-      // TweenMax.fromTo("nav", 1, {}, {bottom:"-50vh", ease: Linear.easeNone})
-  	]);
   
-  // build scene
-  var smscene4 = new ScrollMagic.Scene({duration: 250})
-  				.setTween(tweenDiv)
-  				.addTo(controller);
-          
-  var tweenDiv = new TimelineMax ()
-  	.add([
-  		TweenMax.fromTo(".divider", 1, {top:7}, {top:37, ease: Elastic}),
-      // TweenMax.fromTo("nav", 1, {}, {bottom:"-50vh", ease: Linear.easeNone})
-  	]);
-  
-  // build scene
-  var smscene4 = new ScrollMagic.Scene({duration: 250})
-  				.setTween(tweenDiv)
-  				.addTo(controller);
-          
-          
-          
-          
-          
-          
-          
+  var smsceneDivider = new ScrollMagic.Scene({triggerElement: ".portfolio-container"})
+  					// trigger a velocity opaticy animation
+  					.setVelocity("#logo_small", {opacity: 1}, {duration: 200, easing:Elastic})
+  					.addTo(controller);
+    
           
           
           
@@ -514,12 +616,9 @@ var smscene3 = new ScrollMagic.Scene({duration: 300})
       $('#wave').css({'display': 'inherit'});
     }
   });
-
-  $(document).ready(function(){
+  
+  $(document).ready(function(portheight){
     $('body').smoothScroll({
       delegateSelector: 'ul a'
     });
-    
-    
-    
   });
