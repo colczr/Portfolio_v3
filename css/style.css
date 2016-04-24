@@ -1,8 +1,29 @@
 
 body {
-  font-family: "Open Sans", "Sans Serif", "Arial"; 
+  font-family: "Lato", "Sans Serif", "Arial"; 
   font-weight: 400;
   overflow-x: hidden;
+  letter-spacing: 0.05rem;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align:center;
+  padding-top: 1rem;
+  letter-spacing: 0.05rem;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+h4{
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align:center;
+  letter-spacing: 0.05rem;
+  color: #666;
 }
 
 .divider{
@@ -104,7 +125,7 @@ canvas{
   src: url(../fonts/Tsukushi.ttc); }
 
 #home{
-  height: 60vh;
+  height: 100vh;
 }
 
 .section{
@@ -135,12 +156,20 @@ canvas{
   width: 100vw;
 }
 
-.gallery{
+.gallery img{
   width: 100%;
   display: block;
   margin:auto;
-  margin-bottom: 5rem;
-  
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.gallery img:hover{
+  background-color: #ddd;
+}
+
+div.portfolio-container div.row div.columns{
+  margin-bottom: 3rem;
 }
 
 #about .gallery{
@@ -210,7 +239,7 @@ a{
 
 .contact-container{
   position: fixed;
-  height: 30rem;
+  height: 35rem;
   width: auto;
   top: 0;
   bottom: 0;
@@ -232,13 +261,19 @@ a{
 }
 
 .about-container{
-  background-image: url(../img/wave_long.png);
-  background-repeat: no-repeat;
+  /*background-image: url(../img/wave_long.png);
+  background-repeat: no-repeat;*/
   background-color: #333;
+  /*background-size: cover;*/
+  margin-top: 25rem;
   position: absolute;
   left: 0;
   right: 0;
   width: 100vw;
+}
+
+.about-container > img {
+  width: 100%;
 }
 
 .about-container > .container{
@@ -247,7 +282,7 @@ a{
 }
 
 #contact{
-  height: 80vh;
+  height: 180vh;
   background-color: #333;
 
   left: 0;
@@ -260,7 +295,7 @@ a{
 }
 
 .about-container .container{
-  height: 100vh;
+  height: 110vh;
 }
 
 

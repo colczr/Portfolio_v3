@@ -466,86 +466,69 @@ var smscene1 = new ScrollMagic.Scene({duration: 1500})
   
 
 
-var tweenHeroFade = new TimelineMax ()
-	.add([
-		TweenMax.fromTo(".hero-1", 1, {autoAlpha: 1}, {autoAlpha: 0, ease: Linear.easeNone})
-	]);
+var tweenHeroFade = new TweenMax.fromTo(".hero-1", 1, {autoAlpha: 1}, {autoAlpha: 0, ease: Linear.easeNone});
+    
+var tweenHeroSlow = new TweenMax.fromTo(".hero-1", 1, {y: 0}, {y:250, ease: Linear.easeNone});
+
 
 // build scene
 var smscene3 = new ScrollMagic.Scene({duration: 400})
 				.setTween(tweenHeroFade)
 				.addTo(controller);
-
-var tweenHeroFade = new TimelineMax ()
-	.add([
-		TweenMax.fromTo(".hero-1", 1, {autoAlpha: 1}, {autoAlpha: 0, ease: Linear.easeNone})
-	]);
-
-// build scene
-var smscene3 = new ScrollMagic.Scene({triggerElement: '#fadeTrigger', duration: 400})
-				.setTween(tweenHeroFade)
+        
+var smscene3a = new ScrollMagic.Scene({duration: 400})
+				.setTween(tweenHeroSlow)
 				.addTo(controller);
+
 
 
 var tweenPort = new TimelineMax ()
 	.add([
-		TweenMax.fromTo(".portfolio-container", 1, {top:400}, {top:50, ease: Linear.easeNone})
+		TweenMax.fromTo(".portfolio-container", 1, {y:0}, {y:250, ease: Linear.easeNone})
 	]);
 
 // build scene
-var smscene3 = new ScrollMagic.Scene({duration: 600})
+var smscene3 = new ScrollMagic.Scene({triggerElement: "#about", duration: 400})
 				.setTween(tweenPort)
 				.addTo(controller);
 
 
-
-var portHeight = $(".portfolio-container").height();
-var aboutHeight = $(".about-container").height();
-
-$("#contact").css('top', portHeight + aboutHeight + $("#home").height() + 25);
+// 
+// var portHeight = $(".portfolio-container").height();
+// var aboutHeight = $(".about-container").height();
+// 
+// $("#contact").css('top', portHeight + aboutHeight + $("#home").height() + 25);
 
 //so that the section never overlapses with port section
-$(window).on('resize', function(portHeight, aboutHeight, controller){
-  portHeight = getPortHeight();
-  aboutHeight = getAboutHeight();
-  home = $('#home').height();
-  abc = portHeight + aboutHeight + home;
-  $("#contact").css('top', abc + 25);
-  
+// $(window).on('resize', function(portHeight, aboutHeight, controller){
+//   portHeight = getPortHeight();
+//   aboutHeight = getAboutHeight();
+//   home = $('#home').height();
+//   abc = portHeight + aboutHeight + home;
+//   $("#contact").css('top', abc + 25);
+//   
+// 
+// });
 
-});
-
-function getPortHeight(){
-  portH = $(".portfolio-container").height();
-  return portH;
-}
-
-function getAboutHeight(){
-  aboutH = $(".about-container").height();
-  return aboutH;
-}
-
-
+// function getPortHeight(){
+//   portH = $(".portfolio-container").height();
+//   return portH;
+// }
+// 
+// function getAboutHeight(){
+//   aboutH = $(".about-container").height();
+//   return aboutH;
+// }
 
 
-  var waveUp = new TimelineMax ()
-  	.add([
-  		TweenMax.fromTo(".about-container", 1, {top:portHeight + 850}, {top:portHeight + 300, ease: Linear.easeNone})
-  	]);
-
-  // build scene
-  var smsceneWaveUp = new ScrollMagic.Scene({triggerElement: "#about", duration: 500})
-  				.setTween(waveUp)
-  				.addTo(controller);
-
-  var waveUp = new TimelineMax ()
+  var changeColor = new TimelineMax ()
   	.add([
   		TweenMax.fromTo(".portfolio-container", 1, {autoAlpha: 1}, {autoAlpha: 0, ease: Linear.easeNone}),
       TweenMax.to('.navItem', 1.5, {color: '#aaa'})
   	]);
 
-  var smscene1 = new ScrollMagic.Scene({triggerElement: "#about", duration: 200})
-    .setTween(waveUp)
+  var smsceneChangeColor = new ScrollMagic.Scene({triggerElement: "#about", duration: 400})
+    .setTween(changeColor)
   	.addTo(controller);
     
   var portraitFade = new TimelineMax ()
@@ -553,7 +536,7 @@ function getAboutHeight(){
   		TweenMax.to("#fadeBox", 1, {autoAlpha: 1, ease: Linear.easeNone}),
   	]);
     
-  var smscenePortraitFade = new ScrollMagic.Scene({triggerElement: "#about", offset: "150vh", duration: 200})
+  var smscenePortraitFade = new ScrollMagic.Scene({triggerElement: "#about", triggerHook: 'onLeave', duration: 200})
     .setTween(portraitFade)
     .addTo(controller);
     
@@ -566,11 +549,11 @@ function getAboutHeight(){
   var contactIn = new TimelineMax ()
   	.add([
       TweenMax.fromTo(".contact-container", 1, {autoAlpha: 0}, {autoAlpha: 1}),
-      TweenMax.fromTo("#logo_small", 1, {autoAlpha: 1}, {autoAlpha: 0})
+      TweenMax.to("#logo_small", 1, {autoAlpha: 0, duration: 100})
       
   	]);
 
-  var smseneContactIn = new ScrollMagic.Scene({triggerElement: "#contact", duration: 200})
+  var smseneContactIn = new ScrollMagic.Scene({triggerElement: "#contact", duration: 200, reverse:true})
     .setTween(contactIn)
     .addTo(controller);
 
@@ -584,28 +567,28 @@ function getAboutHeight(){
     
   });
   
-  var smsceneDivider = new ScrollMagic.Scene({triggerElement: "#portfolio", duration:50})
+  var smsceneLogo = new ScrollMagic.Scene({triggerElement: ".portfolio-container"})
+            // trigger a velocity opaticy animation
+            .setVelocity("#logo_small", {opacity: 1}, {duration: 200, easing:Elastic})
+            .addTo(controller);
+  
+  var smsceneDivider2 = new ScrollMagic.Scene({triggerElement: "#portfolio", duration:50})
   					// trigger a velocity opaticy animation
   					.setTween(".divider", {y: "31rem"})
   					.addTo(controller);
             
-  var smsceneDivider2 = new ScrollMagic.Scene({triggerElement: "#about", duration: 50})
+  var smsceneDivider3 = new ScrollMagic.Scene({triggerElement: "#about", duration: 50})
   					// trigger a velocity opaticy animation
   					.setTween(".divider", {y: "61rem"})
             .addTo(controller);
   
-  var smsceneDivider2 = new ScrollMagic.Scene({triggerElement: "#contact", duration: 50})
+  var smsceneDivider4 = new ScrollMagic.Scene({triggerElement: "#contact", duration: 50})
   					// trigger a velocity opaticy animation
   					.setTween(".divider", {y: "91rem"})
             .addTo(controller);
   
   
-  var smsceneDivider = new ScrollMagic.Scene({triggerElement: ".portfolio-container"})
-  					// trigger a velocity opaticy animation
-  					.setVelocity("#logo_small", {opacity: 1}, {duration: 200, easing:Elastic})
-  					.addTo(controller);
-    
-          
+
           
           
   
@@ -617,7 +600,7 @@ function getAboutHeight(){
     }
   });
   
-  $(document).ready(function(portheight){
+  $(document).ready(function(){
     $('body').smoothScroll({
       delegateSelector: 'ul a'
     });
