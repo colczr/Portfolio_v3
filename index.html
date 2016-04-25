@@ -38,14 +38,6 @@
 				</ul>
 			</nav>
 			
-			<!-- <div id="border">
-			</div> -->
-			
-			
-			
-			<!-- <div class="navbg">
-			</div> -->
-			
 			<div class="section-container">
 				<div class="section" id="home">
 					<img class="hero-1" src="img/logo.png"/>
@@ -56,64 +48,75 @@
 					</div>
 
 				<div id="portfolio" class="section">
-					<div class="portfolio-container container">
-						<div class="row">
-							
-							<div class="four columns ">
-								<a class="gallery" href="http://www.colinchen.net/creative/" target="_blank">
-									<img src="img/portfolio/creative.png"/></a>
-									<h3>Watercolor-Style Portfolio</h3>
-									<h4>My old portfolio</h4>
+					<div id="portfolio-nav">
+						<a class="filter al" data-filter=".mix">All</a>
+						<a class="filter" data-filter=".ux">UX</a>
+						<a class="filter" data-filter=".ui">UI/Graphic</a>
+						<a class="filter" data-filter=".fr">Front-End</a>
+					</div>
+					<div id="Container" class="portfolio-container container grid">
+							<div class="gridItem mix ui">
+								<a class="gallery" href="http://www.dribbble.com/colinchen" target="_blank">
+									<img src="img/portfolio/dribbble.png"/></a>
+									<h3>Graphic/UI Work</h3>
+									<h4>Collection of Work</h4>
 							</div>
-						
-							<div class="four columns ">
+							
+							<div class="gridItem mix ux">
 								<a class="gallery" href="portfolio/mend.html">
 									<img src="img/portfolio/mend.png"/></a>
 									<h3>Mend</h3>
 									<h4>UX Design</h4>
 							</div>
 							
-							<div class="four columns ">
-								<a class="gallery" href="http://www.dribbble.com/colinchen" target="_blank">
-									<img src="img/portfolio/dribbble.png"/></a>
-									<h3>Graphic/UI Work</h3>
-									<h4>Collection of Work</h4>
+							<div class="gridItem mix ux">
+								<a class="gallery" href="portfolio/ryce.html">
+									<img src="img/portfolio/ryce.png"/></a>
+									<h3>Ryce</h3>
+									<h4>UX Design</h4>
 							</div>
-						</div>
-						
-						<div class="row">
-							<div class="four columns ">
-								<a class="gallery" href="http://www.colinchen.net/opis" target="_blank">
-									<img src="img/portfolio/opis.png"/></a>
-									<h3>Opis</h3>
-									<h4>Front/Backend Engineering</h4>
-							</div>
-							<div class="four columns ">
+											
+							<div class="gridItem mix ux">
 								<a class="gallery" href="portfolio/postitplus.html">
 									<img src="img/portfolio/postitplus.png"/></a>
 									<h3>Post-it Plus</h3>
 									<h4>UX Research</h4>
 							</div>
-							<div class="four columns ">
+							
+							<div class="gridItem mix ux">
 								<a class="gallery" href="portfolio/pixup.html">
 									<img src="img/portfolio/pixup.png"/></a>
 									<h3>PixUp</h3>
 									<h4>UX Design</h4>
 							</div>
-						</div>
-						<div class="row">
-							<div class="four columns ">
+							
+							<div class="gridItem mix ui fr">
+								<a class="gallery" href="http://www.colinchen.net/creative/" target="_blank">
+									<img src="img/portfolio/creative.png"/></a>
+									<h3>Watercolor-Style Portfolio</h3>
+									<h4>My old portfolio</h4>
+							</div>
+						
+							
+							
+			
+
+							<div class="gridItem mix ux">
 								<a class="gallery" href="portfolio/activair.html">
 									<img src="img/portfolio/activair.png"/></a>
 									<h3>Activair</h3>
 									<h4>UX Design</h4>
 							</div>
-							<!-- <div class="four columns">
-								<img class="gallery" src="img/portfolio/creative.png"/>
-							</div> -->
-						</div>
+							<div class="gridItem mix fr">
+								<a class="gallery" href="http://www.colinchen.net/opis" target="_blank">
+									<img src="img/portfolio/opis.png"/></a>
+									<h3>Opis</h3>
+									<h4>Front/Backend Engineering</h4>
+							</div>
+
+
 					</div>
-				</div>
+	
 				<div id="floatContent">
 					
 				</div>
@@ -174,11 +177,13 @@
 		<script type="text/javascript" src="scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 		<script type="text/javascript" src="js/libs/jquery.smooth-scroll.js"></script>
 		
-		<script src="js/three.min.js"></script>
-		<script src="js/renderers/Projector.js"></script>
-		<script src="js/renderers/CanvasRenderer.js"></script>
-		<script src="js/libs/stats.min.js"></script>
-		<script src="js/obj/Bird.js"></script>
-		<script src="js/main.js"></script>
+		<script type="text/javascript" src="js/three.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+		<script type="text/javascript" src="js/renderers/Projector.js"></script>
+		<script type="text/javascript" src="js/renderers/CanvasRenderer.js"></script>
+		<script type="text/javascript" src="js/libs/stats.min.js"></script>
+		<script type="text/javascript" src="js/obj/Bird.js"></script>
+		<script type="text/javascript" src="js/canvas.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
