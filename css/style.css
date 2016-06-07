@@ -1,13 +1,23 @@
 body {
-  font-family: "Lato", "Sans Serif", "Arial";
+  font-family: "Gz", "Sans Serif", "Arial";
   font-weight: 400;
   overflow-x: hidden;
   letter-spacing: 0.05rem;
 }
 
+@font-face {
+    font-family: Gz;
+    src: url(../fonts/gzawL.ttf);
+}
+
+@font-face {
+    font-family: Gzb;
+    src: url(../fonts/gzaw.ttf);
+}
+
 h3{
   font-size: 1.5rem;
-  font-weight: 400;
+  font-family: Gz;
   text-align:center;
   padding-top: 1rem;
   letter-spacing: 0.05rem;
@@ -15,13 +25,15 @@ h3{
   padding-top: 1rem;
   color: #666;
   margin-bottom: 0;
+  font-weight: 400;
+
 }
 
 h4{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
   text-align:center;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.03rem;
   color: #666;
 }
 
@@ -68,7 +80,6 @@ canvas{
 
 nav > ul > li{
   list-style-type: none;
-
   color: #666;
   padding-bottom: 1rem;
   padding-right: 2rem;
@@ -123,16 +134,18 @@ nav > ul > li{
   width: 100%;
   display: block;
   margin:auto;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  /*-webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;*/
 }
 
-.gallery img:hover{
+/*.gallery img:hover{
   background-color: #ddd;
-}
+}*/
 
 div.gridItem{
-  margin-bottom: 3rem !important;
+  margin-bottom: 3rem;
+  display: inline-block;
+  width: 15rem;
 }
 
 #about .gallery{
@@ -237,7 +250,7 @@ a{
 
 
 .portfolio-container{
-  margin-bottom: 15rem;
+  margin-bottom: 25rem;
 }
 
 .about-container > img {
@@ -258,7 +271,7 @@ a{
 }
 
 #about {
-  color: #fff;
+  color: #ccc;
   font-weight: 300;
 }
 
@@ -338,4 +351,8 @@ a.al {
 
 #Container .mix{
     display: none;
+}
+
+li.navItem a{
+  font-family: Gz;
 }
