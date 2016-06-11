@@ -10,16 +10,16 @@
         <?php
 
           $id = substr($_SERVER['REQUEST_URI'], -8, 4);
-          $addr = array("Grap" => "https://dribbble.com/colinchen",
-                        "Opis" => "opis/index.html");
+          $addr = array("grap" => "https://dribbble.com/colinchen",
+                        "opis" => "opis/index.html");
 
-          $li = array("Kasa" => "Kasa",
-                      "Grap" => "Graphic/UI",
-                      "Mend" => "Mend",
-                      "Ryce" => "Ryce",
-                      "Post" => "Post-it Plus",
-                      "Pixu" => "PixUp",
-                      "Opis" => "Opis");
+          $li = array("kasa" => "Kasa",
+                      "grap" => "Graphic/UI",
+                      "mend" => "Mend",
+                      "ryce" => "Ryce",
+                      "post" => "Post-it Plus",
+                      "pixu" => "PixUp",
+                      "opis" => "Opis");
 
           foreach ($li as $key => $item){
             if ($key == $id){
