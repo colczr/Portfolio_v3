@@ -5,6 +5,8 @@ body {
   letter-spacing: 0.05rem;
 }
 
+
+
 @font-face {
     font-family: Gz;
     src: url(../fonts/gzawL.ttf);
@@ -17,7 +19,6 @@ body {
 
 h3{
   font-size: 1.5rem;
-  font-family: Gz;
   text-align:center;
   padding-top: 1rem;
   letter-spacing: 0.05rem;
@@ -30,7 +31,7 @@ h3{
 }
 
 h4{
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 300;
   text-align:center;
   letter-spacing: 0.03rem;
@@ -78,14 +79,16 @@ canvas{
   opacity: 0;
 }
 
-nav > ul > li{
-  list-style-type: none;
+nav > ul{
   color: #666;
   padding-bottom: 1rem;
   padding-right: 2rem;
   margin: 0;
 }
 
+li {
+  list-style-type: none;
+}
 
 
 .hero-1{
@@ -328,7 +331,8 @@ a{
 #portfolio-nav {
   width: 25rem;
   margin: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .filter {
@@ -355,4 +359,48 @@ a.al {
 
 li.navItem a{
   font-family: Gz;
+}
+
+
+nav.pnav {
+  height: 25rem;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .about-container:first-child{
+    width: 150%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  nav > ul > li{
+    display: none;
+  }
+
+  .divider{
+    display: none;
+  }
+
+
+  #portrait{
+    display: none;
+  }
+
+  .aboutText1{
+    width: 80vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .portfolio-container{
+    width: 95vw;
+    padding: 0;
+  }
+
+  .about-container:first-child{
+    width: 200%;
+  }
 }

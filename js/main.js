@@ -113,8 +113,8 @@
     portW = $(".portfolio-container").width();
     if (portW >= 720) {
       $(".gridItem").css({'width': portW / 3.4, 'margin': portW / 80, 'display':'inline-block'});
-    } else if (portW < 720 && portW > 400) {
-      $(".gridItem").css({'width': portW / 2.4, 'margin': portW / 80, 'display':'inline-block'});
+    } else if (portW < 720) {
+      $(".gridItem").css({'width': portW / 2.2, 'margin': portW / 80, 'display':'inline-block'});
     } else {
       $(".gridItem").css({'width': '50vw', 'display':'block', 'margin': 'auto'});
     }
@@ -159,12 +159,12 @@
   });
 
   $(".gallery img").on('mouseenter', function(){
-    $(this).fadeTo('fast',0.3);
+    $(this).stop().fadeTo('fast',0.3);
 
   });
 
   $(".gallery img").on('mouseleave', function(){
-    $(this).fadeTo('fast',1);
+    $(this).stop().fadeTo('fast',1);
 
   });
 
