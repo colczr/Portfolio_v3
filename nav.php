@@ -8,6 +8,7 @@
         <?php
 
           $id = substr($_SERVER['REQUEST_URI'], -8, 4);
+<<<<<<< HEAD
           $addr = array("Grap" => "https://dribbble.com/colinchen",
                         "Opis" => "opis/index.html");
 
@@ -18,6 +19,18 @@
                       "Post" => ["Post-it Plus", "12.7rem"],
                       "Pixu" => ["PixUp", "15.7rem"],
                       "Opis" => ["Opis"]);
+=======
+          $addr = array("grap" => "https://dribbble.com/colinchen",
+                        "opis" => "opis/index.html");
+
+          $li = array("kasa" => "Kasa",
+                      "grap" => "Graphic/UI",
+                      "mend" => "Mend",
+                      "ryce" => "Ryce",
+                      "post" => "Post-it Plus",
+                      "pixu" => "PixUp",
+                      "opis" => "Opis");
+>>>>>>> origin/master
 
           foreach ($li as $key => $item){
 
