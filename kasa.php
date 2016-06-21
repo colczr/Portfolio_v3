@@ -1,7 +1,7 @@
 <?php
 ini_set( 'error_reporting', E_ALL );
 ini_set( 'display_errors', true );
-
+include("authentication.php");
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +33,7 @@ ini_set( 'display_errors', true );
 		<div id="container">
 
 		<?php
+
 			include "nav.php";
 
 

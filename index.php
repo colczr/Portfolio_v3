@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['id'])) {
+		header("Location: login.php");
+		exit();
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -24,13 +34,13 @@
 		    <div class="tm-loader"><div class="spinner"></div></div>
 		</div>
 
-		<div id="container">
+		<div class="home-container">
 
 			<nav>
 				<div class="divider">
 				</div>
 				<ul>
-					<a href="#home"><img id="logo_small" src="img/logo_small.png"/></a>
+					<!-- <a href="#home"><img id="logo_small" src="img/logo_small.png"/></a> -->
 					<li class="navItem"><a href="#home">Home</a></li>
 					<li class="navItem"><a href="#portfolio">Portfolio</a></li>
 					<li class="navItem"><a href="#about">About</a></li>
@@ -54,7 +64,7 @@
 						<a class="filter" data-filter=".ui">UI/Graphic</a>
 						<a class="filter" data-filter=".fr">Front-End</a>
 					</div>
-					<div id="Container" class="portfolio-container container grid">
+					<div class="portfolio-container reg-container grid">
 							<div class="gridItem mix ux">
 								<a class="gallery" href="Kasa.php">
 									<img src="img/portfolio/kasa.png"/></a>
@@ -111,16 +121,17 @@
 									<h4>Front/Backend</h4>
 							</div>
 
-
 					</div>
 
 				<div id="floatContent">
 
 				</div>
+				<div id="inTrigger">
+					
+				</div>
 				<div id="about">
 					<div class="about-container">
-						<img src="img/wave_long.png" />
-						<div class="about-content container">
+						<div class="about-content reg-container">
 							<div id="fadeBox">
 									<img id="portrait" src="img/portrait.png"/>
 									<p class="aboutText1">I try to be a "detective": discovering usability problems, knowing the tools you have and using the right one to solve the right problem. That's what I believe a UX designer should be. Designers are designers because we create and design solutions to problems, rather than opening a manual and repeat the exact same thing over and over again. <br><br>
@@ -144,6 +155,8 @@
 								<a href="https://www.github.com/colczr" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
 							</p>
 
+						</div>
+						<div class="gray-bg">
 						</div>
 					</div>
 
@@ -182,5 +195,6 @@
 		<script type="text/javascript" src="js/obj/Bird.js"></script>
 		<script type="text/javascript" src="js/canvas.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/mainScMa.js"></script>
 	</body>
 </html>

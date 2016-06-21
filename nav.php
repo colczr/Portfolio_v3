@@ -1,11 +1,9 @@
 
 
     <nav class="pnav">
-      <div class="divider">
-      </div>
+
       <ul style="padding-right: 0.2rem;">
-        <a href="index.html#portfolio"><img id="logo_small" src="img/logo_small.png"/></a>
-        <li style="margin-bottom: 1.5rem;"><a href="index.html#portfolio">Portfolio</a></li>
+          <a href="index.php#portfolio"><img id="logo_small" style="opacity: 1" src="img/logo_small.png"/></a>
 
         <?php
 
@@ -13,31 +11,32 @@
           $addr = array("Grap" => "https://dribbble.com/colinchen",
                         "Opis" => "opis/index.html");
 
-          $li = array("Kasa" => "Kasa",
-                      "Grap" => "Graphic/UI",
-                      "Mend" => "Mend",
-                      "Ryce" => "Ryce",
-                      "Post" => "Post-it Plus",
-                      "Pixu" => "PixUp",
-                      "Opis" => "Opis");
+          $li = array("Kasa" => ["Kasa", "0.7rem"],
+                      "Grap" => ["Graphic/UI"],
+                      "Mend" => ["Mend", "6.7rem"],
+                      "Ryce" => ["Ryce", "9.7rem"],
+                      "Post" => ["Post-it Plus", "12.7rem"],
+                      "Pixu" => ["PixUp", "15.7rem"],
+                      "Opis" => ["Opis"]);
 
           foreach ($li as $key => $item){
-            if ($key == $id){
-              echo '<li class="navItem" style="color: #c42128; font-family: Gzb">';
-            } else {
-              echo '<li class="navItem">';
-            };
+
+            echo '<li class="navItem">';
             echo '<a href="';
             if (isset($addr[$key])){
               echo $addr[$key].'" target="_blank"';
             } else {
               echo $key.'.php"';
             };
-            echo '>'.$item.'</a></li>';
+            echo '>'.$item[0].'</a></li>';
           }
+
+          echo '</ul>';
+          echo '<div class="divider" style="top:'.$li[$id][1].'"></div>'
           ?>
 
-      </ul>
+
+
     </nav>
 
 <?php

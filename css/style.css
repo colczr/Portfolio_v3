@@ -38,6 +38,10 @@ h4{
   color: #666;
 }
 
+.gridItem h4{
+  margin-bottom: 4rem;
+}
+
 nav{
   position: fixed;
   height: 10rem;
@@ -111,7 +115,7 @@ li {
 }
 
 
-#container{
+.home-container{
   position: absolute;
   z-index: 2;
 }
@@ -155,7 +159,7 @@ div.gridItem{
   padding-top: 0.7rem;
 }
 
-.container{
+.reg-container{
   position: relative;
   width: 80vw;
   margin: auto;
@@ -242,7 +246,7 @@ a{
 .about-container{
   /*background-image: url(../img/wave_long.png);
   background-repeat: no-repeat;*/
-  background-color: #333;
+
   /*background-size: cover;*/
 
   position: absolute;
@@ -260,7 +264,7 @@ a{
   width: 100%;
 }
 
-.about-container > .container{
+.about-container > .reg-container{
   padding-top: 20rem;
   margin-bottom: 0;
 }
@@ -273,12 +277,35 @@ a{
   right: 0;
 }
 
+#filler{
+  width: 20rem;
+  display: block;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -20rem;
+}
+
+#inTrigger{
+  height: 20vh;
+  width: 76vw;
+  margin: auto;
+  background-image:url(../img/filler.png);
+  background-size: cover;
+  background-position: center;
+}
+
+hr{
+  border-top: solid #666 1px;
+}
+
 #about {
   color: #ccc;
   font-weight: 300;
 }
 
-.about-container .container{
+.about-container .reg-container{
   height: 110vh;
 }
 
@@ -306,6 +333,19 @@ a{
 
 #fadeBox{
   visibility: hidden;
+}
+
+.gray-bg{
+  background-color: #333;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  visibility: hidden;
+  z-index: -1;
 }
 
 .aboutText1 > span{
@@ -353,7 +393,7 @@ a.al {
   border-bottom: 1px solid #c33;
 }
 
-#Container .mix{
+.home-container .mix{
     display: none;
 }
 
@@ -365,6 +405,68 @@ li.navItem a{
 nav.pnav {
   height: 25rem;
 }
+
+
+.container{
+  margin-top: 3rem;
+}
+
+
+
+.caption-bg{
+  width: 100%;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  position: fixed;
+
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.caption{
+  width: 60rem;
+  height: 25rem;
+  color: #ccc;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  position: fixed;
+  margin:auto;
+
+  text-align:center;
+
+}
+
+.caption-bg-gray{
+  width: 100vw;
+  background-color:#333;
+  height: 100vh;
+  top: 0;
+  left:0;
+  position: fixed;
+}
+
+.content{
+  width: 80rem;
+  margin: auto;
+
+}
+
+
+h2{
+  margin:1rem;
+}
+
+
+
+
+
+
+
 
 
 

@@ -30,15 +30,35 @@ ini_set( 'display_errors', true );
 		    <div class="tm-loader"><div class="spinner"></div></div>
 		</div>
 
-		<div id="container">
+		<div class="project-container">
 
 		<?php
 			include "nav.php";
 
 
 	  ?>
+			<div class="content">
+				<div class="caption-bg-gray">
+				</div>
+					<div class="caption-bg" style="background-image: url(img/bg4.png);">
 
-			<div class="section-container">
+					</div>
+
+				<div class="caption">
+					<h2>PixUp</h2>
+					<p>Mobile App UX Design<br><br>
+						PixUp is a peer-to-peer delivery service that connects vehicle owners (drivers) with people who need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.</p>
+				</div>
+
+
+
+				<div class="caption2" style="padding-top: 100vh;">
+					<h2>PixUp</h2>
+					<p>Mobile App UX Design<br><br>
+						PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.PixUp is a peer-to-peer delivery service that is currently under development. PixUp connects vehicle owners (drivers) with people that potentially need delivery service (users). Drivers accept delivery requests from/to the users and in return get paid for their service.</p>
+				</div>
+
+
 			</div>
 		</div>
 
@@ -60,6 +80,7 @@ ini_set( 'display_errors', true );
 		<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 		<script type="text/javascript" src="js/libs/stats.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/pixup.js"></script>
 	</body>
 </html>
 
