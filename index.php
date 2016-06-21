@@ -66,7 +66,7 @@ if (!isset($_SESSION['id'])) {
 					</div>
 					<div class="portfolio-container reg-container grid">
 							<div class="gridItem mix ux">
-								<a class="gallery" href="kasa.php">
+								<a class="gallery" href="Kasa.php">
 									<img src="img/portfolio/kasa.png"/></a>
 									<h3>TP-Link Kasa</h3>
 									<h4>UX Design</h4>
@@ -80,28 +80,28 @@ if (!isset($_SESSION['id'])) {
 							</div>
 
 							<div class="gridItem mix ux">
-								<a class="gallery" href="mend.php">
+								<a class="gallery" href="Mend.php">
 									<img src="img/portfolio/mend.png"/></a>
 									<h3>Mend</h3>
 									<h4>UX Design</h4>
 							</div>
 
 							<div class="gridItem mix ux">
-								<a class="gallery" href="ryce.php">
+								<a class="gallery" href="Ryce.php">
 									<img src="img/portfolio/ryce.png"/></a>
 									<h3>Ryce</h3>
 									<h4>UX Design</h4>
 							</div>
 
 							<div class="gridItem mix ux">
-								<a class="gallery" href="post.php">
+								<a class="gallery" href="Post.php">
 									<img src="img/portfolio/postitplus.png"/></a>
 									<h3>Post-it Plus</h3>
 									<h4>UX Research</h4>
 							</div>
 
 							<div class="gridItem mix ux">
-								<a class="gallery" href="pixu.php">
+								<a class="gallery" href="Pixu.php">
 									<img src="img/portfolio/pixup.png"/></a>
 									<h3>PixUp</h3>
 									<h4>UX Design</h4>
@@ -127,7 +127,7 @@ if (!isset($_SESSION['id'])) {
 
 				</div>
 				<div id="inTrigger">
-					
+
 				</div>
 				<div id="about">
 					<div class="about-container">
