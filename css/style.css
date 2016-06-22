@@ -76,7 +76,7 @@ canvas{
 
 #logo_small{
   position: fixed;
-  right: 4.3rem;
+  right: 4.7rem;
   height: 5rem;
   top: 2rem;
   z-index: 10000;
@@ -289,10 +289,11 @@ a{
 
 #inTrigger{
   height: 20vh;
-  width: 76vw;
+  width: 78vw;
   margin: auto;
   background-image:url(../img/filler.png);
-  background-size: cover;
+  background-size: 90rem;
+  background-repeat:no-repeat;
   background-position: center;
 }
 
@@ -427,7 +428,8 @@ nav.pnav {
 }
 
 .caption{
-  width: 60rem;
+  width: 65vw;
+  max-width: 60rem;
   height: 25rem;
   color: #ccc;
   left:0;
@@ -441,6 +443,8 @@ nav.pnav {
 
 }
 
+
+
 .caption-bg-gray{
   width: 100vw;
   background-color:#333;
@@ -451,13 +455,14 @@ nav.pnav {
 }
 
 .content{
-  width: 80rem;
+  width: 75vw;
+  max-width: 75rem;
   margin: auto;
-
+  padding-right: 5rem;
 }
 
 
-h2{
+.caption h2{
   margin:1rem;
 }
 
@@ -504,5 +509,19 @@ h2{
 
   .about-container:first-child{
     width: 200%;
+  }
+
+  .content{
+    padding-right: 0;
+  }
+
+  #inTrigger{
+    width: 100vw;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-size: 150vw;
   }
 }

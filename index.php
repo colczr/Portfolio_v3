@@ -40,7 +40,6 @@ if (!isset($_SESSION['id'])) {
 				<div class="divider">
 				</div>
 				<ul>
-					<!-- <a href="#home"><img id="logo_small" src="img/logo_small.png"/></a> -->
 					<li class="navItem"><a href="#home">Home</a></li>
 					<li class="navItem"><a href="#portfolio">Portfolio</a></li>
 					<li class="navItem"><a href="#about">About</a></li>
